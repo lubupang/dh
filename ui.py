@@ -39,7 +39,7 @@ if Tkinter:
                 self.c.setRemotePublicNum(_)
                 self.initButton.destroy()
                 self.sendButton = Tkinter.Button(
-                    self, text="发送", command=self.onSend)
+                    self, text="加密", command=self.onSend)
                 self.receiveButton = Tkinter.Button(
                     self, text="解密", command=self.onReceive)
                 self.sendButton.grid(row=2, column=1, padx=10, pady=10)

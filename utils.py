@@ -143,6 +143,7 @@ class AESCipher:
         return (iv + encrypt_bytes).hex()
 
     def decrypt( self, enc ):
+        enc=re.sub(r'[\r\n\t]','',enc)
         enc = bytes.fromhex(enc)
         iv = enc[:AES.block_size]
         enc = enc[AES.block_size:]
